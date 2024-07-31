@@ -8,6 +8,7 @@ public class Matricula {
     private boolean isPaid;
     private int numMatricula;
     private Set<Student> students;
+    private int value;
 
     public Matricula(){
         this.isPaid=false;
@@ -39,5 +40,13 @@ public class Matricula {
 
     public void setNumMatricula(int numMatricula) {
         this.numMatricula = numMatricula;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 }

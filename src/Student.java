@@ -1,4 +1,6 @@
+import javax.swing.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Student {
@@ -9,13 +11,30 @@ public class Student {
      private String degree;
     private Set<Matricula> matriculas;
     private Set<Subjetc> subjetcs;
+    private Pay payMethot;
+    private String selected="";
 
     public Student(int code, String studentName, boolean status, String degree) {
         this.code = code;
         this.studentName = studentName;
         this.status = status;
         this.degree = degree;
-        this.matriculas = new HashSet<>();
+
+
+    }
+    public List<String> defineSubjects(List generalSubjects){
+        selected="subject"
+        subjetcs = new HashSet<>();
+        for(Object generalSubject : generalSubjects){
+            if(this.selected== generalSubject){
+                subjetcs.add(this.selected);
+            }
+        }
+        return subjetcs
+    }
+    public void pagar(double monto, int reference) {
+        payMethot.makePay(monto, reference,this.status);
+        payMethot.payType("normal");
     }
 
     public void addMatricula(Matricula matricula) {
